@@ -26,7 +26,10 @@ $('#btnSubirfoto').click(function () {
                 mostrarMensajeusuario("correcto","Tu imagen se ha subido exitosamente.");
                 document.forms["frmSubirfoto"].reset();
             }
-            else{
+            else if (response == "errorbd"){
+                mostrarMensajeusuario("error","Hemos tenido un error en la Base de datos. Intenta nuevamente.");
+            }
+            else if (response == "error"){
                 mostrarMensajeusuario("error","Hemos tenido un error. Intenta nuevamente.");
             }
         }

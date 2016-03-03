@@ -46,7 +46,7 @@ switch ($tipo)
         if (move_uploaded_file($sourcePath, $carpetaguardar.$idfoto.".jpg")) 
         {
             $respuesta = "creado";
-            $guardar = mysql_query("INSERT INTO tbl_imagen(id_imagen,descripcion_imagen,direccion_imagen,fechacreacion_imagen,fk_usario_imagen) VALUES ('$idfoto','$descripcionfoto','$carpetaguardarbd','$fechacreacion','$idusuario');"); //creamos la consulta con INSERT INTO para insertar los valores recogidos 
+            $guardar = mysql_query("INSERT INTO tbl_imagen(id_imagen,descripcion_imagen,direccion_imagen,fechacreacion_imagen,fk_usuario_imagen) VALUES ('$idfoto','$descripcionfoto','$carpetaguardarbd','$fechacreacion','$idusuario');"); //creamos la consulta con INSERT INTO para insertar los valores recogidos 
 		    mysql_close($conexion);//cerramos la conexion
         } 
         else 
