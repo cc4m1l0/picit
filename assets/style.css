@@ -69,6 +69,12 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 #works figcaption a:hover{text-decoration: none;padding: 0 3em;}
 /*works*/
 
+/*imagenespicit*/
+#imagenespicit{padding-top:6em;}
+#imagenespicit figcaption a{border:1px solid #fff;margin-top: 1em;display: inline-block;color: #fff;padding: 0 2em;}
+#imagenespicit figcaption a:hover{text-decoration: none;padding: 0 3em;}
+/*imagenespicit*/
+
 /*team*/
 .team figure{width: 100%;}
 .team img{width: 100%;}
@@ -136,6 +142,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 	h4 {font: 300 1.2em Roboto,Arial,Helvetica;}
 	#partners h2{padding: 0 1em;} 
 	#works {padding-top: 5em;}
+	#imagenespicit {padding-top: 5em;}
 
 	.partners{display: block;float: left;}
 	.partners img{width: 120px;}

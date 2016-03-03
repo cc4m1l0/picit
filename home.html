@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body onload="primeraCarga()">
 <div class="topbar animated fadeInLeftBig"></div>
 
 <!-- Header Starts -->
@@ -42,7 +42,7 @@
           <div class="container">
             <div class="navbar-header">
               <!-- Logo Starts -->
-              <a class="navbar-brand" href="#home"><img src="images/logo.png" alt="logo"></a>
+              <a class="navbar-brand" href="#home"><img src="images/logo.png" alt="logo"><p id="txtNombreusuario" style="margin-left: 130px; margin-top: -45px; font-size: x-large">Nombre del usuario</p></a>
               <!-- #Logo Ends -->
 
 
@@ -59,7 +59,7 @@
             <!-- Nav Starts -->
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
-                 <li class="active"><a href="#works">Fotos</a></li>
+                 <li class="active"><a href="#imagenespicit">Fotos</a></li>
                  <li class="active"><a href="perfil.html">Perfil</a></li>
                  <li class="active"><a id="cerrarsesion" href="#">Cerrar Sesión</a></li>
               </ul>
@@ -80,7 +80,7 @@
         <p id="txtmensajeUsuario" class="text-center">...</p>
     </div>
 </div>
-<div id="formlogin" class="container contactform center">
+<div id="formsubirfoto" class="container contactform center">
 <h2 class="text-center  wowload fadeInUp" style="margin-top: 20px;">SUBIR FOTO</h2>
   <div class="row wowload fadeInLeftBig">      
       <div class="col-sm-6 col-sm-offset-3 col-xs-12">
@@ -95,9 +95,8 @@
 </div>
 <!--Contact Ends-->
 
-<!-- works -->
-<div id="works" class=" clearfix grid"> 
-     <figure class="effect-sadie  wowload fadeInUp"> 
+<!-- imagenes de la plataforma , ejemplo de esquema de una imagen
+    <figure class="effect-sadie  wowload fadeInUp"> 
         <a href="images/portfolio/1.jpg" title="Descripción de la foto" data-gallery>
             <img src="images/portfolio/1.jpg" alt="img01"/>  
         <figcaption>
@@ -105,48 +104,11 @@
         </figcaption>   
         </a>
     </figure>
-     <figure class="effect-sadie  wowload fadeInUp"> 
-        <a href="images/portfolio/2.jpg" title="Descripción de la foto" data-gallery>
-            <img src="images/portfolio/2.jpg" alt="img01"/>  
-        <figcaption>
-            <button type="submit" onclick="window.open('images/portfolio/2.jpg')" class="btn btn-default btn-block">Descargar</button>           
-        </figcaption>   
-        </a>
-    </figure>
-     <figure class="effect-sadie  wowload fadeInUp"> 
-        <a href="images/portfolio/3.jpg" title="Descripción de la foto" data-gallery>
-            <img src="images/portfolio/3.jpg" alt="img01"/>  
-        <figcaption>
-            <button type="submit" onclick="window.open('images/portfolio/3.jpg')" class="btn btn-default btn-block">Descargar</button>           
-        </figcaption>   
-        </a>
-    </figure>
-     <figure class="effect-sadie  wowload fadeInUp"> 
-        <a href="images/portfolio/4.jpg" title="Descripción de la foto" data-gallery>
-            <img src="images/portfolio/4.jpg" alt="img01"/>  
-        <figcaption>
-            <button type="submit" onclick="window.open('images/portfolio/4.jpg')" class="btn btn-default btn-block">Descargar</button>           
-        </figcaption>   
-        </a>
-    </figure>
-     <figure class="effect-sadie  wowload fadeInUp"> 
-        <a href="images/portfolio/5.jpg" title="Descripción de la foto" data-gallery>
-            <img src="images/portfolio/5.jpg" alt="img01"/>  
-        <figcaption>
-            <button type="submit" onclick="window.open('images/portfolio/5.jpg')" class="btn btn-default btn-block">Descargar</button>           
-        </figcaption>   
-        </a>
-    </figure>
-     <figure class="effect-sadie  wowload fadeInUp"> 
-        <a href="images/portfolio/6.jpg" title="Descripción de la foto" data-gallery>
-            <img src="images/portfolio/6.jpg" alt="img01"/>  
-        <figcaption>
-            <button type="submit" onclick="window.open('images/portfolio/6.jpg')" class="btn btn-default btn-block">Descargar</button>           
-        </figcaption>   
-        </a>
-    </figure>
+-->
+<div id="imagenespicit" class=" clearfix grid"> 
+     
 </div>
-<!-- works -->
+<!-- Imágenes de la plataforma Ends -->
 
 <!-- Footer Starts -->
 <div class="footer text-center spacer">

@@ -1,5 +1,6 @@
 <?php
 include("conexionbd.php");
+include_once 'MysqltXML.php';
 $tipo = $_POST["tipo"];
 switch ($tipo)
 {
@@ -24,6 +25,23 @@ switch ($tipo)
             $nomusuario = $var["nombre_usuario"];
         }
         $respuesta = $idusuario."::".$nomusuario;
+    }
+    mysql_close($conexion);//cerramos la conexion
+
+    print $respuesta;
+    break;
+    case "listarfotos":
+    $respuesta = "";
+    $rst = mysql_query("SELECT direccion_imagen, descripcion_imagen FROM tbl_imagen ORDER BY fechacreacion_imagen DESC;",$conexion);
+    $numero_reg = mysql_num_rows($rst);
+    if ($numero_reg == 0)
+    {
+        $respuesta = "noexiste";
+    }
+    else
+    {
+        $xml = sqlToXml($rst, "imagenes", "imagen");
+        $respuesta = $xml;
     }
     mysql_close($conexion);//cerramos la conexion
 

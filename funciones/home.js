@@ -1,5 +1,58 @@
 var validacionimagenproducto1 = false;
 
+function primeraCarga(){
+    //cargo el dato del nombre del usuario
+    var mensajeusuario = document.getElementById("txtNombreusuario");
+    var nombreUsuario = window.localStorage.getItem('nombreusuario');//obtengo un dato del almacenamiento local
+    mensajeusuario.innerHTML = nombreUsuario;
+    //cargo las imágenes del sistema por fecha
+    CargarImagenes();
+}
+
+function CargarImagenes(){
+    var fd = new FormData();
+    fd.append('tipo', 'listarfotos');
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "funciones/listarbd.php", true);
+    xhr.onload = function () {
+        if (this.status == 200) {
+            var response = xhr.responseText;
+            if (response == "noexiste") {
+                mostrarMensajeusuario("incorrecto","No hay imágenes en PicIt. Empieza subiendo una");
+            }
+            else if (response == "errorbd"){
+                mostrarMensajeusuario("error","Hemos tenido un error en la Base de datos. Intenta nuevamente.");
+            }
+            //capturamos y procesamos el XML con los datos de las imágenes
+            else{
+                
+               var htmlimagenes = "";
+               $(response).find("imagen").each(function () {
+                    pathimagen = $(this).find("direccion_imagen").text();
+                    descripcionimagen = $(this).find("descripcion_imagen").text();
+                    //creamos cada imagen
+                    htmlimagenes += "<figure class='effect-sadie  wowload fadeInUp'>";
+                    htmlimagenes += "<a href=\"" + pathimagen + "\" title=\"" + descripcionimagen + "\" data-gallery>";
+                    htmlimagenes += "<img src=\"" + pathimagen + "\" alt='imgusuario'/>  ";
+                    htmlimagenes += "<figcaption>";
+                    htmlimagenes += "<button type='submit' onclick='window.open(\""+ pathimagen + "\")' class='btn btn-default btn-block'>Descargar</button>";
+                    htmlimagenes += "</figcaption>";
+                    htmlimagenes += "</a>";
+                    htmlimagenes += "</figure>";
+                });
+                var imagenespicit = document.getElementById('imagenespicit');
+                imagenespicit.innerHTML = htmlimagenes;
+            }
+        }
+        else {
+            mostrarMensajeusuario("error","Hemos tenido un error. Intenta nuevamente.");
+            var imagenespicit = document.getElementById('imagenespicit');
+            imagenespicit.innerHTML = "";
+        };
+    };
+    xhr.send(fd);
+}
+
 $('#btnSubirfoto').click(function () {
     var descripcionfoto = $("#descripcionfoto").val();
     if (descripcionfoto == "") {
