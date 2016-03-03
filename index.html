@@ -35,10 +35,9 @@
 <div class="topbar animated fadeInLeftBig"></div>
 
 <!-- Header Starts -->
-<div class="navbar-wrapper">
+<div class="navbar" style="height: 70px;">
       <div class="container">
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav" >
           <div class="container">
             <div class="navbar-header">
               <!-- Logo Starts -->
@@ -59,7 +58,7 @@
             <!-- Nav Starts -->
             <div class="navbar-collapse  collapse">
               <ul class="nav navbar-nav navbar-right scroll">
-                 <li class="active"><a href="#works">Inicio</a></li>
+                 <li class="active"><a href="#login">Inicio</a></li>
               </ul>
             </div>
             <!-- #Nav Ends -->
@@ -72,10 +71,14 @@
 <!-- #Header Starts -->
 
 <!--Contact Starts-->
-<div class="spacer" id="login"  style="margin-bottom: -100px;">
-
+<div id="login" style="margin-bottom: 0px;">  
+    <div id="controlMensajes" class="control-mensajesusuario hidden" style="margin-top: 0px;">
+    <div class="texto-mensajeusuario">
+        <p id="txtmensajeUsuario" class="text-center">...</p>
+    </div>
+</div>
 <div id="formlogin" class="container contactform center">
-<h2 class="text-center  wowload fadeInUp" style="margin-top: 30px;">INICIAR SESIÓN</h2>
+<h2 class="text-center  wowload fadeInUp" style="margin-top: 20px;">INICIAR SESIÓN</h2>
   <div class="row wowload fadeInLeftBig">      
       <div class="col-sm-6 col-sm-offset-3 col-xs-12">
        <form id="frmLogin" name="frmLogin">         
@@ -84,21 +87,24 @@
         </form>
         <button id="btnLogin" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Entrar a PicIt</button>
           <br/><br/>
-        <button id="btnRegistro" class="btn btn-primary" style="background-color:#39d4e5"><i class="fa fa-edit"></i> Registrarme a PicIt</button>
+        <button id="btnRegistro" class="btn btn-primary" style="background-color:#39d4e5; margin-bottom: 0px;"><i class="fa fa-edit"></i> Registrarme a PicIt</button>
       </div>
   </div>
 </div>
 <div id="formregister" class="container contactform center hidden">
-<h2 class="text-center  wowload fadeInUp" style="margin-top: 30px;">REGISTRO EN PICIT</h2>
+<h2 class="text-center  wowload fadeInUp" style="margin-top: 50px;">REGISTRO EN PICIT</h2>
   <div class="row wowload fadeInLeftBig">      
       <div class="col-sm-6 col-sm-offset-3 col-xs-12">
-       <form id="frmLogin" name="frmLogin">         
-            <input type="text" id="nombreusuario" name="nombreusuario" placeholder="Ingresa tu nombre completo">
-            <input type="text" id="correousuario" name="correousuario" placeholder="Ingresa tu correo electrónico">
-            <input type="password" id="claveusuario" name="claveusuario" placeholder="Contraseña">
-           <input type="password" id="reclaveusuario" name="reclaveusuario" placeholder="Verificar contraseña">
+       <form id="frmRegister" name="frmRegister">         
+            <input type="text" id="nombreusuarior" name="nombreusuarior" placeholder="Ingresa tu nombre completo">
+            <input type="text" id="correousuarior" name="correousuarior" placeholder="Ingresa tu correo electrónico">
+            <input type="password" id="claveusuarior" name="claveusuarior" placeholder="Contraseña">
+           <input type="password" id="reclaveusuarior" name="reclaveusuarior" placeholder="Verificar contraseña">
         </form>
         <button id="btnRegistrarme" class="btn btn-primary" style="background-color:#39d4e5"><i class="fa fa-edit"></i> Registrarme en PicIt</button>
+        <br/><br/>
+        <button id="btnfrmLogin" class="btn btn-primary" style=" margin-bottom: 12px;"><i class="fa fa-user"></i> Ya soy usuario PicIt</button>
+          
       </div>
   </div>
 </div>
@@ -111,40 +117,40 @@
         <img src="images/portfolio/1.jpg" alt="img01"/>
         <figcaption>
             <h2>Naturaleza</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/1.jpg" title="1" data-gallery>View more</a></p>            
+            <p>PicIt te invita a subir tus fotos con la naturaleza<br>
+            <a href="images/portfolio/1.jpg" title="" data-gallery>Ver Grande</a></p>            
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
         <img src="images/portfolio/2.jpg" alt="img01"/>
         <figcaption>
             <h2>Eventos</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/2.jpg" title="1" data-gallery>View more</a></p>            
+            <p>PicIt te invita a subir las fotos con tus amigos<br>
+            <a href="images/portfolio/2.jpg" title="" data-gallery>Ver Grande</a></p>            
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
         <img src="images/portfolio/3.jpg" alt="img01"/>
         <figcaption>
             <h2>Música</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/3.jpg" title="1" data-gallery>View more</a></p>            
+            <p>PicIt te invita a subir las fotos de tus eventos<br>
+            <a href="images/portfolio/3.jpg" title="" data-gallery>Ver Grande</a></p>            
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
         <img src="images/portfolio/4.jpg" alt="img01"/>
         <figcaption>
             <h2>Viajes</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/4.jpg" title="1" data-gallery>View more</a></p>            
+            <p>PicIt te invita a compartir las fotos de tus viajes<br>
+            <a href="images/portfolio/4.jpg" title="" data-gallery>Ver Grande</a></p>            
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
         <img src="images/portfolio/5.jpg" alt="img01"/>
         <figcaption>
             <h2>Recuerdos</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/5.jpg" title="1" data-gallery>View more</a></p>            
+            <p>PicIt te invita a subir tus fotos de recuerdos<br>
+            <a href="images/portfolio/5.jpg" title="" data-gallery>Ver Grande</a></p>            
         </figcaption>
     </figure>
      
@@ -152,8 +158,8 @@
         <img src="images/portfolio/6.jpg" alt="img01"/>
         <figcaption>
             <h2>Comida</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/6.jpg" title="1" data-gallery>View more</a></p>            
+            <p>PicIt te invita a subir las fotos de eso que tanto disfrutas<br>
+            <a href="images/portfolio/6.jpg" title="" data-gallery>Ver Grande</a></p>            
         </figcaption>
     </figure>
 </div>

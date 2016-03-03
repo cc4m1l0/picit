@@ -35,9 +35,9 @@
 <div class="topbar animated fadeInLeftBig"></div>
 
 <!-- Header Starts -->
-<div class="navbar-wrapper">
+<div class="navbar" style="height: 70px;">
       <div class="container">
-
+          
         <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
           <div class="container">
             <div class="navbar-header">
@@ -61,7 +61,7 @@
               <ul class="nav navbar-nav navbar-right scroll">
                  <li class="active"><a href="#works">Fotos</a></li>
                  <li class="active"><a href="perfil.html">Perfil</a></li>
-                 <li class="active"><a href="#works">Cerrar Sesión</a></li>
+                 <li class="active"><a id="cerrarsesion" href="#">Cerrar Sesión</a></li>
               </ul>
             </div>
             <!-- #Nav Ends -->
@@ -74,18 +74,21 @@
 <!-- #Header Starts -->
 
 <!--Contact Starts-->
-<div class="spacer" id="login"  style="margin-bottom: -100px;">
-
+<div id="login" style="margin-bottom: 0px;">  
+<div id="controlMensajes" class="control-mensajesusuario hidden" style="margin-top: 0px;">
+    <div class="texto-mensajeusuario">
+        <p id="txtmensajeUsuario" class="text-center">...</p>
+    </div>
+</div>
 <div id="formlogin" class="container contactform center">
-<h2 class="text-center  wowload fadeInUp" style="margin-top: 50px;">SUBIR FOTO</h2>
+<h2 class="text-center  wowload fadeInUp" style="margin-top: 20px;">SUBIR FOTO</h2>
   <div class="row wowload fadeInLeftBig">      
       <div class="col-sm-6 col-sm-offset-3 col-xs-12">
        <form id="frmSubirfoto" enctype="multipart/form-data" name="frmSubirfoto">         
-            <input type="text" id="nombrefoto" name="nombrefoto" placeholder="Nombre de tu foto">
             <input type="text" id="descripcionfoto" name="descripcionfoto" placeholder="Descripción de tu foto">
             <input type="file" id="imagenusuario" name="imagenusuario" accept="image/*">      
         </form>
-        <button id="btnSubirfoto" class="btn btn-primary" style="margin-bottom: 12px;"><i class="fa fa-upload"></i> Subir foto </button>
+        <button id="btnSubirfoto" class="btn btn-primary" ><i class="fa fa-upload"></i> Subir foto </button>
       </div>
   </div>
 </div>
@@ -93,60 +96,57 @@
 <!--Contact Ends-->
 
 <!-- works -->
-<div id="works"  class=" clearfix grid"> 
-    <figure class="effect-oscar  wowload fadeIn">
-        <img src="images/portfolio/1.jpg" alt="img01"/>
+<div id="works" class=" clearfix grid"> 
+     <figure class="effect-sadie  wowload fadeInUp"> 
+        <a href="images/portfolio/1.jpg" title="Descripción de la foto" data-gallery>
+            <img src="images/portfolio/1.jpg" alt="img01"/>  
         <figcaption>
-            <h2>Naturaleza</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/1.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
+            <button type="submit" onclick="window.open('images/portfolio/1.jpg')" class="btn btn-default btn-block">Descargar</button>           
+        </figcaption>   
+        </a>
     </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/2.jpg" alt="img01"/>
+     <figure class="effect-sadie  wowload fadeInUp"> 
+        <a href="images/portfolio/2.jpg" title="Descripción de la foto" data-gallery>
+            <img src="images/portfolio/2.jpg" alt="img01"/>  
         <figcaption>
-            <h2>Eventos</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/2.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
+            <button type="submit" onclick="window.open('images/portfolio/2.jpg')" class="btn btn-default btn-block">Descargar</button>           
+        </figcaption>   
+        </a>
     </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/3.jpg" alt="img01"/>
+     <figure class="effect-sadie  wowload fadeInUp"> 
+        <a href="images/portfolio/3.jpg" title="Descripción de la foto" data-gallery>
+            <img src="images/portfolio/3.jpg" alt="img01"/>  
         <figcaption>
-            <h2>Música</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/3.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
+            <button type="submit" onclick="window.open('images/portfolio/3.jpg')" class="btn btn-default btn-block">Descargar</button>           
+        </figcaption>   
+        </a>
     </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/4.jpg" alt="img01"/>
+     <figure class="effect-sadie  wowload fadeInUp"> 
+        <a href="images/portfolio/4.jpg" title="Descripción de la foto" data-gallery>
+            <img src="images/portfolio/4.jpg" alt="img01"/>  
         <figcaption>
-            <h2>Viajes</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/4.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
+            <button type="submit" onclick="window.open('images/portfolio/4.jpg')" class="btn btn-default btn-block">Descargar</button>           
+        </figcaption>   
+        </a>
     </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/5.jpg" alt="img01"/>
+     <figure class="effect-sadie  wowload fadeInUp"> 
+        <a href="images/portfolio/5.jpg" title="Descripción de la foto" data-gallery>
+            <img src="images/portfolio/5.jpg" alt="img01"/>  
         <figcaption>
-            <h2>Recuerdos</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/5.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
+            <button type="submit" onclick="window.open('images/portfolio/5.jpg')" class="btn btn-default btn-block">Descargar</button>           
+        </figcaption>   
+        </a>
     </figure>
-     
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/6.jpg" alt="img01"/>
+     <figure class="effect-sadie  wowload fadeInUp"> 
+        <a href="images/portfolio/6.jpg" title="Descripción de la foto" data-gallery>
+            <img src="images/portfolio/6.jpg" alt="img01"/>  
         <figcaption>
-            <h2>Comida</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/6.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
+            <button type="submit" onclick="window.open('images/portfolio/6.jpg')" class="btn btn-default btn-block">Descargar</button>           
+        </figcaption>   
+        </a>
     </figure>
 </div>
 <!-- works -->
-
-</div>
 
 <!-- Footer Starts -->
 <div class="footer text-center spacer">
