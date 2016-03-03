@@ -78,6 +78,7 @@ $('#btnSubirfoto').click(function () {
             if (response == "creado") {
                 mostrarMensajeusuario("correcto","Tu imagen se ha subido exitosamente.");
                 document.forms["frmSubirfoto"].reset();
+                CargarImagenes();
             }
             else if (response == "errorbd"){
                 mostrarMensajeusuario("error","Hemos tenido un error en la Base de datos. Intenta nuevamente.");
