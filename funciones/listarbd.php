@@ -10,7 +10,7 @@ switch ($tipo)
     $idusuario = "";
     $nomusuario = "";
     //validamos q el correo no está en uso
-    $rst = mysql_query("SELECT id_usuario, nombre_usuario FROM tbl_usuario WHERE correo_usuario= '".$correousuarior."' AND clave_usuario = '".$claveusuario."';",$conexion);
+    $rst = mysql_query("SELECT id_usuario, nombre_usuario FROM tbl_usuario WHERE correo_usuario= '".$nombreusuario."' AND clave_usuario = '".$claveusuario."';",$conexion);
     $numero_reg = mysql_num_rows($rst);
     if ($numero_reg == 0)
     {
