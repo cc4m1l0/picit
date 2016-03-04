@@ -30,7 +30,7 @@ function CargarImagenes(){
                $(response).find("imagen").each(function () {
                     pathimagen = $(this).find("direccion_imagen").text();
                     descripcionimagen = $(this).find("descripcion_imagen").text();
-                    var res = descripcionimagen.split('/');
+                    var res = pathimagen.split('/');
                     var nombreimagen = res[2];
                     //creamos cada imagen
                     htmlimagenes += "<figure class='effect-sadie  wowload fadeInUp'>";
