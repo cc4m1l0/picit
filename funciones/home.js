@@ -30,12 +30,14 @@ function CargarImagenes(){
                $(response).find("imagen").each(function () {
                     pathimagen = $(this).find("direccion_imagen").text();
                     descripcionimagen = $(this).find("descripcion_imagen").text();
+                    var res = descripcionimagen.split('/');
+                    var nombreimagen = res[2];
                     //creamos cada imagen
                     htmlimagenes += "<figure class='effect-sadie  wowload fadeInUp'>";
                     htmlimagenes += "<a href=\"" + pathimagen + "\" title=\"" + descripcionimagen + "\" data-gallery>";
                     htmlimagenes += "<img src=\"" + pathimagen + "\" alt='imgusuario'/>  ";
                     htmlimagenes += "<figcaption>";
-                    htmlimagenes += "<button type='submit' onclick='window.open(\""+ pathimagen + "\")' class='btn btn-default btn-block'>Descargar</button>";
+                    htmlimagenes += "<button type='submit' onclick='window.open(\"funciones/download.php?file=../"+pathimagen+"&name="+nombreimagen+"\")' class='btn btn-default btn-block'>Descargar</button>";
                     htmlimagenes += "</figcaption>";
                     htmlimagenes += "</a>";
                     htmlimagenes += "</figure>";
